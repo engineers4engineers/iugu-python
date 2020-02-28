@@ -14,7 +14,7 @@ setup(
   version= __version__,
   author='Felipe Tomaz, Arthur Furlan',
   author_email='gmail@felipetomaz.com, afurlan@afurlan.org',
-  packages=['iugu'],
+  packages=['engineers4engineers'],
   scripts=[],
   url='https://github.com/iugu/iugu-python',
   license='MIT',
