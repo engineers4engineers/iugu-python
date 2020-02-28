@@ -32,6 +32,11 @@ class Subscription(Action):
         url = self.api.make_url(['subscriptions', id, 'activate'])
         return self.api.post(url)
 
+    def simulate_change_plan(self, id, plan_identifier):
+        url = self.api.make_url(['subscriptions', id,
+                                 'change_plan_simulation', plan_identifier])
+        return self.api.get(url)
+
     def change_plan(self, id, plan_identifier):
         url = self.api.make_url(['subscriptions', id,
                                  'change_plan', plan_identifier])
