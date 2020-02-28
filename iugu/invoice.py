@@ -42,6 +42,18 @@ class Invoice(Action):
         url = self.api.make_url(['invoices', id, 'refund'])
         return self.api.post(url)
 
+    def capture(self, id):
+        url = self.api.make_url(['invoices', id, 'capture'])
+        return self.api.post(url)
+
+    def duplicate(self, id, data):
+        url = self.api.make_url(['invoices', id, 'duplicate'])
+        return self.api.post(url, data)
+
+    def send_email(self, id):
+        url = self.api.make_url(['invoices', id, 'send_email'])
+        return self.api.post(url)
+
     def list(self, data={}):
         url = self.api.make_url(['invoices'])
         return super(Invoice, self).list(url, data)
